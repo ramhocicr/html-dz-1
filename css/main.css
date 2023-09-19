@@ -33,6 +33,18 @@ body {
 .site-nav .link:focus {
   color: #2196f3;
 }
+.site-nav .link.current {
+  color: #2196f3;
+}
+
+.contacts .link {
+  color: #757575;
+}
+
+.email:hover,
+.email:focus {
+  color: #2196f3;
+}
 
 /* hero */
 .hero {
@@ -54,4 +66,20 @@ body {
 .button {
   color: #fff;
   background-color: #2196f3;
+}
+
+/* team */
+
+.team {
+  background-color: #f5f4fa;
+}
+
+/* Footer */
+
+.footer {
+  background-color: #2f303a;
+}
+
+.footer-contacts {
+  color: rgba(255, 255, 255, 0.6);
 }

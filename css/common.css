@@ -1,0 +1,47 @@
+body {
+    background-color: #fff;
+    color: #212121;
+  }
+  .list {
+    list-style: none;
+  }
+  /* цвет основного текста #212121 */
+  
+  /* вторичный цвет текста #757575 */
+  
+  /* белый цвет #FFFFFF */
+  
+  /* акцент  #2196F3 */
+  
+  /* цвет тел и мыло в футере rgba(255, 255, 255, 0.60) */
+  
+  /* цвет фона 1 #FFF */
+  /* цвет фона 2 #2F303A */
+  /* цвет фона 3 #F5F4FA */
+  
+  .logo {
+    color: #000;
+  }
+  
+  /* site-nav */
+  
+  .site-nav .link {
+    color: #212121;
+  }
+  
+  .site-nav .link:hover,
+  .site-nav .link:focus {
+    color: #2196f3;
+  }
+  .site-nav .link.current {
+    color: #2196f3;
+  }
+  
+  .contacts .link {
+    color: #757575;
+  }
+  
+  .email:hover,
+  .email:focus {
+    color: #2196f3;
+  }
