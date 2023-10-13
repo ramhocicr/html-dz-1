@@ -1,10 +1,9 @@
-body {
-  background-color: #fff;
-  color: #212121;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
-.list {
-  list-style: none;
-}
+
 /* цвет основного текста #212121 */
 
 /* вторичный цвет текста #757575 */
@@ -19,67 +18,372 @@ body {
 /* цвет фона 2 #2F303A */
 /* цвет фона 3 #F5F4FA */
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-text-color: #212121;
+  --secondary-text-color: #757575;
+  --accent-color: #2196f3;
+  --transparency-color: rgba(255, 255, 255, 0.6);
+  --background-color-prime: #fff;
+  --background-color-second: #2f303a;
+  --background-color-third: #f5f4fa;
+}
+
+body {
+  background-color: var(--background-color-prime);
+  color: var(--primary-text-color);
+  font-family: "Raleway", sans-serif;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.03em;
+  margin: 0;
+}
+
+.container {
+  width: 1230px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 94px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .logo {
+  color: var(--accent-color);
+  font-family: Raleway, sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  text-decoration: none;
+  margin-right: 93px;
+  letter-spacing: 0.78px;
+}
+
+.logo-header {
   color: #000;
+}
+
+.logo-footer {
+  color: var(--background-color-prime);
 }
 
 /* site-nav */
 
-.site-nav .link {
-  color: #212121;
+.site-nav {
+  display: flex;
+  align-items: center;
 }
 
-.site-nav .link:hover,
-.site-nav .link:focus {
-  color: #2196f3;
+.navigation {
+  display: flex;
 }
-.site-nav .link.current {
-  color: #2196f3;
+
+.navigation .item + .item {
+  margin-left: 50px;
+}
+
+.navigation .link {
+  color: var(--primary-text-color);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.28px;
+
+  text-decoration: none;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  display: block;
+}
+
+.navigation .link:hover,
+.navigation .link:focus {
+  color: var(--accent-color);
+}
+.navigation .link.current {
+  color: var(--accent-color);
+}
+
+.envelope {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.smartphone {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  fill: currentColor;
 }
 
 .contacts .link {
-  color: #757575;
+  color: var(--secondary-text-color);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  font-style: normal;
+
+  padding-top: 32px;
+  padding-bottom: 32px;
+  display: block;
 }
 
-.email:hover,
-.email:focus {
-  color: #2196f3;
+.contacts {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+}
+
+.contacts .item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.contacts .link:hover,
+.contacts .link:focus {
+  color: var(--accent-color);
+}
+
+.main-nav {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: auto;
 }
 
 /* hero */
-.hero {
-  background-color: #2f303a;
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
-.third-color {
-  color: #fff;
+
+.hero.section {
+  background: #c4c4c4;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/hero/hero-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero {
+  background-color: var(--background-color-second);
+  text-align: center;
+}
+
+.hero-title {
+  margin-top: 0;
+  color: var(--background-color-prime);
+  font-size: 44px;
+  line-height: 1.36;
+  font-weight: 900;
+  margin-bottom: 30px;
+  letter-spacing: 2.64px;
+  text-transform: uppercase;
+  line-height: 60px;
+  width: 696px;
+  text-align: center;
+  margin: 0px auto 30px auto;
+}
+
+.section-title {
+  margin-top: 0;
+  margin-bottom: 56px;
+}
+
+/* PREIMYWESTVA */
+
+.benefits::before {
+  content: "";
+  display: block;
+  height: 120px;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #f5f4fa;
+  margin-bottom: 30px;
+}
+
+.icon-antenna::before {
+  background-image: url(../images/icons/antenna\ 1.png);
+}
+
+.icon-clock::before {
+  background-image: url(../images/icons/clock\ 1.png);
+}
+
+.icon-diagram::before {
+  background-image: url(../images/icons/diagram\ 1.png);
+}
+
+.icon-astronaut::before {
+  background-image: url(../images/icons/astronaut\ 1.png);
 }
 
 .feature-list .title {
-  color: #212121;
+  color: var(--primary-text-color);
+}
+
+.feature-list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.feature-list .item {
+  width: 270px;
+  height: 72px;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 10px;
+  list-style: none;
+}
+
+.team-description {
+  margin-top: 0;
 }
 
 .description {
-  color: #757575;
+  color: var(--secondary-text-color);
+  font-size: 14px;
+  line-height: 1.7;
+  font-weight: 400;
 }
+
+h2 {
+  font-size: 36px;
+  font-weight: 700;
+}
+
 /* button */
 
 .button {
-  color: #fff;
-  background-color: #2196f3;
+  color: var(--background-color-prime);
+  background-color: var(--accent-color);
+  text-align: center;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.9;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 4px;
+  padding: 10px 32px;
+  display: inline-block;
+  width: 216px;
+}
+
+.about {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.projects {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 50px;
+  letter-spacing: 1.08px;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 /* team */
 
 .team {
-  background-color: #f5f4fa;
+  background-color: var(--background-color-third);
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.our-team {
+  margin-top: 0;
+  margin-bottom: 50px;
+
+  text-align: center;
+  letter-spacing: 1.08px;
+}
+
+.team-title {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.team-description {
+  color: var(--secondary-text-color);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.team-list {
+  display: flex;
+  flex-direction: row;
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  justify-content: space-around;
 }
 
 /* Footer */
 
 .footer {
-  background-color: #2f303a;
+  background-color: var(--background-color-second);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.basement {
+  margin-bottom: auto;
+}
+
+.phisical-adress {
+  color: var(--background-color-prime);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1, 7;
+  text-decoration: none;
 }
 
 .footer-contacts {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--transparency-color);
+  font-size: 14px;
+  line-height: 1.7;
+  font-style: normal;
+  font-weight: 400;
+  text-decoration: none;
 }
